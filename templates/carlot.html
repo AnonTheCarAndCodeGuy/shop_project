@@ -1,0 +1,19 @@
+{% extends  'main_template.html'%}
+{% block main %}
+    <h1>Car Lot</h1>
+    <a href="{% url 'addcar' %}">Sell a Car</a>
+    <h2>List of cars for sale that you might purchase</h2>
+        {% if cars %}
+        <ul>
+            {% for car in cars %}
+                <li><a href="{% url 'cardetail' car.id %}">{{ car.model_year }}{{ car.brand }}
+                    {{ car.model_name }}{{  }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Sorry, No cars are available now because this website just recently opened.</p>
+    {% endif %}
+
+
+
+{% endblock %}

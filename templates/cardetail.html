@@ -1,0 +1,21 @@
+{% extends  'main_template.html'%}
+{% block main %}
+
+    <h1>{{ car.model_year }} {{ car.brand }} {{ car.model_name }}</h1>
+    <p>{{ car.description }}</p>
+
+    <h3>Specs</h3>
+    <ul>
+        <li>Location = {{ car.location }}</li>
+        <li>Body Type = {{ car.body_type }}</li>
+        <li>Mileage (in kms) = {{ car.mileage  }}</li>
+        <li>Engine Capacity(In CC) = {{ car.engine_capacity_in_cc }}</li>
+        <li>Engine Type = {{ car.engine_type }}</li>
+        <li>Transmission = {{ car.transmission }}</li>
+        <li>Fuel Type = {{ car.fuel_type }}</li>
+        <li>Seating Capacity = {{ car.seating_capacity }}</li>
+        <li>Available? = {{ car.is_available }}</li>
+    </ul>
+    <h3>Price(in USD) = {{ car.price_in_usd }}</h3>
+
+{% endblock %}

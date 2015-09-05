@@ -1,0 +1,14 @@
+{% extends 'main_template.html' %}
+{% block main %}
+<h1>Add a Brand(admin only)</h1>
+<div>
+    <form method="post" action="{% url 'addbrand' %}">
+        {% csrf_token %}
+        {{BrandForm.as_p}}
+
+        <p>
+            <button type="submit" class="btn btn-primary">SAVE</button>
+        </p>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends  'main_template.html'%}
+{% block main %}
+
+    <h2>Add a Car To Our Market</h2>
+
+        <form action="{% url 'addcar'  %}" method="post">
+            {% csrf_token %}
+            {{ CarForm.as_p }}
+            <div>
+                <button type="submit">Sell It</button>
+             </div>
+        </form>
+
+{% endblock %}
